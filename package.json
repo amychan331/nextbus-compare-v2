@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "NODE_ENV=development mocha --compilers js:babel-core/register --require ignore-styles --env=jsdom src/test/*.spec.js",
+    "test": "NODE_ENV=development mocha --compilers js:babel-core/register --require ignore-styles src/test/*.spec.js",
     "eject": "react-scripts eject"
   },
   "devDependencies": {

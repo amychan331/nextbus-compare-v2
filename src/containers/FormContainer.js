@@ -1,29 +1,39 @@
-import React, {Component} from 'react';
-import Form from '../components/Form';
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import {
+  fetchRequest,
+  fetchSuccess,
+  fetchFailure
+} from '../actions/action'
+import Form from '../components/Form'
 
-class FormContainer extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //   };
-  //   this.handleSubmit = this.handleSubmit.bind(this);
-  //   this.handleChange = this.handleChange.bind(this);
-  // }
+const FormContainer = ({ agency, stopCode, fetchRequest }) => (
+  <Form
+    agency={agency}
+    stopCode={stopCode}
+    onSubmit={() => fetchRequest(agency)} />
+)
 
-  // handleChange(e) {
-
-  // }
-
-  // handleSubmit(e) {
-
-  // }
-
-  render() {
-    return (
-      <div>
-      </div>
-    )
-  }
+FormContainer.propTypes = {
+  agency: PropTypes.string,
+  stopCode: PropTypes.number,
+  fetchRequest: PropTypes.func.isRequired
 }
 
-export default FormContainer;
+
+const mapStateToProps = (state) => ({
+  agency: ,
+  stopCode:
+})
+
+// Reducer usage
+//  const mapStateToProps = (state) => ({
+//   products: getCartProducts(state),
+//   total: getTotal(state)
+// })
+
+export default connect(
+  mapStateToProps,
+  { fetchRequest }
+)(FormContainer)
