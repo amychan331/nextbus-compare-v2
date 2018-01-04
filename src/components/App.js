@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.css';
-import FormContainer from '../containers/FormContainer';
+import React from 'react'
+import './App.css'
+import Timetable from '../containers/Timetable'
 
 const App = () => (
   <div className="App">
@@ -10,7 +10,7 @@ const App = () => (
     </header>
     <main>
       <p>NextBus Compare let's you compare up to 3 station stops and list all available transit vechicle that will stop at the listed station.</p>
-      <FormContainer />
+      <Timetable />
     </main>
     <footer>
       <small>Copyright &copy; {new Date().getFullYear()} Amy Yuen Ying Chan</small>
@@ -18,4 +18,4 @@ const App = () => (
   </div>
 );
 
-export default App;
+export default App

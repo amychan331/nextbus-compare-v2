@@ -1,10 +1,12 @@
-import { combineReducers } from 'redux';
-import addTime from './addTable';
-import removeTime from './removeTable';
+import { combineReducers } from 'redux'
+import addColumn from './addColumn'
+import removeColumn from './removeColumn'
+import { reducer as formReducer } from 'redux-form'
 
 const reducers = combineReducers({
-  addTable,
-  removeTable
+  addColumn,
+  removeColumn,
+  form: formReducer
 })
 
 export default reducers
