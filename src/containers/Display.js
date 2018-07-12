@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Display.css'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { removeItem } from '../actions/index'

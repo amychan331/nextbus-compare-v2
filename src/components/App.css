@@ -1,46 +1,58 @@
 .App {
-    text-align: center;
+    color: #1C82B5;
     margin: auto;
-    width: 80%;
-}
-
-form {
     text-align: center;
+    width: 75%;
 }
 
-label {
-    font-weight: bold;
+header h1 {
+    color: #C13140;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    text-align: left;
 }
 
-.error {
-    color: red;
-    font-size: .75em;
+header p {
+    color: #1C82B5;
+    font-size: 1.25em;
+    margin-bottom: 20px;
+}
+
+main {
+    border: 2px dashed #063a2f;
+    height: 90%;
+    padding: 10px 0;
+}
+
+main p {
+    color: #589EC1;
+    margin: 5px;
+}
+
+footer {
+    color: #589EC1;
     font-style: italic;
-    font-weight: none;
-    margin-left: 5px;
 }
 
-input[name="submit"] {
-    background-color: #1C82B5;
-    border: 1.5px solid #93B7C7;
-    border-radius: 5px;
-    clear: both;
-    color: white;
-    display: block;
-    font-size: 1em;
-    font-weight: bold;
-    margin: auto;
-    margin-top: 10px;
-    text-shadow: 1px 1px #93B7C7;
+/* Smartphones (portrait and landscape) ----------- */
+@media screen and (min-width : 320px) and (max-width : 768px) {
+    main {
+        padding: 4px 2px;
+    }
+    main .info {
+        text-align: left;
+    }
 }
 
-input[name="submit"]:hover:not([disabled]) {
-    background-color: #145D82;
+/* Smartphones ----------- */
+@media screen and (min-width : 320px) {
+    .App {
+        width: 95%;
+    }
 }
 
-input[disabled] {
-    background-color: #E5E4E2;
-    border: 1px solid #E5E4E2;
-    color: #D3D3D3;
-    text-shadow: 1px 1px #E5E4E2;
+/* Tablet ----------- */
+@media screen and (min-width : 768px) {
+    .App {
+        width: 90%;
+    }
 }

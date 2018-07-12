@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Form.css'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { fetchJSON, fetchRefuse } from '../actions/index'

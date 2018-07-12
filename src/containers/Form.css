@@ -1,0 +1,46 @@
+form {
+    text-align: center;
+}
+
+label {
+    margin-top: 5px;
+}
+
+/*.error {
+    color: red;
+    font-size: .75em;
+    font-style: italic;
+    font-weight: none;
+    margin-left: 5px;
+}
+
+.msg {
+    font-style: italic;
+    text-align: center;
+}*/
+
+input[name="submit"] {
+    background-color: #1C82B5;
+    border: 1.5px solid #93B7C7;
+    border-radius: 5px;
+    clear: both;
+    color: white;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 10px;
+    text-shadow: 1px 1px #93B7C7;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media screen and (min-width : 320px) and (max-width : 768px) {
+    label {
+        clear: both;
+        display: block;
+    }
+    .error {
+        clear: both;
+        display: block;
+    }
+}
