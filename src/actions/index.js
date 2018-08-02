@@ -10,7 +10,6 @@ export const REMOVE_ITEM = 'REMOVE_ITEM'
 
 /* action creators*/
 export function invalidInput (error) {
-  console.log("action: invalidInput")
   return {
     type: INVALID_INPUT,
     error

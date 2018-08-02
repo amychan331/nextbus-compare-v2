@@ -7,7 +7,6 @@ const initialState = {
 export function reducers (state = initialState, action) {
   switch (action.type) {
     case 'INVALID_INPUT':
-      console.log("reducer: INVALID_INPUT")
       return {
         ...state,
         loading: false,

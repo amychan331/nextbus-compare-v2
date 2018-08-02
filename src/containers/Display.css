@@ -1,5 +1,5 @@
 ul {
-    border: 1.5px dashed #b8ece1;
+    border: 2px dashed #b8ece1;
     display: inline-block;
     background-color: #e7f8f5;
     color: #145D82;
@@ -12,13 +12,23 @@ ul {
 
 }
 
-ul h3.station {
+li {
+    list-style: none;
+}
+
+.station {
     font-weight: bold;
     text-decoration: underline;
 }
 
+.vehicle {
+    color: #145D82;
+}
+
 .minutes {
+    color: #145D82;
     font-size: 1.125em;
+    font-weight: bold;
     margin-top: 2px;
 }
 

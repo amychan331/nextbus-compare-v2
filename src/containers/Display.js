@@ -18,9 +18,9 @@ class Display extends Component {
         {this.props.items[stopCode].map(
           (vehicle, id) => (
             <li key={id}>
-              <strong>
+              <p className="vehicle">
               {vehicle.MonitoredVehicleJourney.LineRef}-{vehicle.MonitoredVehicleJourney.PublishedLineName}
-              </strong>
+              </p>
               <p className="minutes">
               {
                 // aimed arrival time and current is converted to numeric values with getTime()
@@ -31,7 +31,7 @@ class Display extends Component {
                     - current
                   ) / 6000
                 )
-              }
+              } min
               </p>
             </li>
           )

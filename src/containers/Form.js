@@ -31,10 +31,11 @@ class Form extends Component {
       this.props.invalidInput("Input should have 1 - 6 digits")
       return false
     }
-    else if (stopCode.isNaN) {
+    else if (isNaN(stopCode)) {
       this.props.invalidInput("Input is not a number")
       return false
     }
+    return true
   }
 
   render() {
