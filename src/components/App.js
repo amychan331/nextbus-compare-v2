@@ -13,7 +13,7 @@ const App = () => (
       <MainContainer />
     </main>
     <footer>
-      <small>Copyright &copy; {new Date().getFullYear()} Amy Yuen Ying Chan</small>
+      <small>Copyright &copy; {new Date().getFullYear()} <a title="My portfolio" href="https://craftplustech.com">Amy Yuen Ying Chan</a></small>
     </footer>
   </div>
 );

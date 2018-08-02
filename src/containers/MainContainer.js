@@ -8,9 +8,9 @@ const MainContainer = ({loading, error, items}) => {
   return (
     <div id="container">
       <Form />
-      { loading ? <div>Loading...</div> : null }
-      { error ? <div>{ error }</div>: null }
-      { Object.keys(items).length ? <Display items={items} /> : "empty" }
+      { loading ? <p className="msg">Loading...</p> : null }
+      { error ? <p className="err">{ error }</p> :
+        Object.keys(items).length ? <Display items={items} /> : <p><em>Please input a transportation agency and station stop code.</em></p> }
     </div>
   )
 }

@@ -17,6 +17,18 @@ header p {
     margin-bottom: 20px;
 }
 
+.err {
+    color: red;
+    font-style: italic;
+    font-weight: none;
+    margin-left: 5px;
+}
+
+.msg {
+    font-style: italic;
+    text-align: center;
+}
+
 main {
     border: 2px dashed #063a2f;
     height: 90%;

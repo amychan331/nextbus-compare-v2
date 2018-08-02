@@ -1,6 +1,7 @@
 import fetch from 'isomorphic-fetch'
 
 /* action types*/
+export const INVALID_INPUT = 'INVALID_INPUT'
 export const REQUEST_DATA = 'REQUEST_DATA'
 export const FETCH_SUCCESS = 'FETCH_SUCCESS'
 export const FETCH_FAILURE = 'FETCH_FAILURE'
@@ -8,6 +9,14 @@ export const FETCH_REFUSE = 'FETCH_REFUSE'
 export const REMOVE_ITEM = 'REMOVE_ITEM'
 
 /* action creators*/
+export function invalidInput (error) {
+  console.log("action: invalidInput")
+  return {
+    type: INVALID_INPUT,
+    error
+  }
+}
+
 export function requestData () {
   return {
     type: REQUEST_DATA,

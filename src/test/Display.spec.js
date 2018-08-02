@@ -12,7 +12,7 @@ import sinon from 'sinon'
 describe("<Display /> component:", function() {
   it('display section exists', function() {
     const dispatch = sinon.spy()
-    const fakeItem = {"17397": fakeAPI.ServiceDelivery.StopMonitoringDelivery.MonitoredStopVisit }
+    const fakeItem = {"17397": fakeAPI.ServiceDelivery.StopMonitoringDelivery.MonitoredStopVisit}
     const wrapper = shallow(<Display
       dispatch={dispatch}
       store={mockStore({})}

@@ -4,20 +4,8 @@ form {
 
 label {
     margin-top: 5px;
+    margin-left: 15px;
 }
-
-/*.error {
-    color: red;
-    font-size: .75em;
-    font-style: italic;
-    font-weight: none;
-    margin-left: 5px;
-}
-
-.msg {
-    font-style: italic;
-    text-align: center;
-}*/
 
 input[name="submit"] {
     background-color: #1C82B5;

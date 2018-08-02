@@ -14,14 +14,14 @@ class Display extends Component {
     const current = (new Date()).getTime()
     const timetable = Object.keys(this.props.items).map(stopCode => (
       <ul key={stopCode}>
-        <h3>Station Code {stopCode}: {this.props.items[stopCode][0].MonitoredVehicleJourney.MonitoredCall.StopPointName} </h3>
+        <h3 className="station">Station Code {stopCode}: {this.props.items[stopCode][0].MonitoredVehicleJourney.MonitoredCall.StopPointName} </h3>
         {this.props.items[stopCode].map(
           (vehicle, id) => (
             <li key={id}>
               <strong>
               {vehicle.MonitoredVehicleJourney.LineRef}-{vehicle.MonitoredVehicleJourney.PublishedLineName}
               </strong>
-              <br />
+              <p className="minutes">
               {
                 // aimed arrival time and current is converted to numeric values with getTime()
                 // then differences is then divide by 6000 to get the minute
@@ -32,6 +32,7 @@ class Display extends Component {
                   ) / 6000
                 )
               }
+              </p>
             </li>
           )
         )}
@@ -52,7 +53,7 @@ class Display extends Component {
 
 Display.propTypes = {
   stopCode: PropTypes.number,
-  items: PropTypes.array.isRequired
+  items: PropTypes.object.isRequired
 }
 
 const mapDispatchToProps = dispatch => {

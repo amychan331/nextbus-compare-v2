@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import './Form.css'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { fetchJSON, fetchRefuse } from '../actions/index'
+import { fetchJSON, fetchRefuse, invalidInput } from '../actions/index'
 
 class Form extends Component {
   constructor(props) {
     super(props)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.validateInput = this.validateInput.bind(this)
   }
 
   handleSubmit(e) {
@@ -15,7 +16,24 @@ class Form extends Component {
     if (Object.keys(this.props.items).length >= 3) {
       this.props.fetchRefuse()
     } else {
-      this.props.fetchJSON(e.target.agency.value, e.target.stopCode.value)
+      if ( this.validateInput(e.target.agency.value, e.target.stopCode.value) ) {
+        this.props.fetchJSON(e.target.agency.value, e.target.stopCode.value)
+      }
+    }
+  }
+
+  validateInput(agency, stopCode) {
+    if (agency.length <= 0) {
+      this.props.invalidInput("Selection of agency is required")
+      return false
+    }
+    else if (stopCode.length <= 0 || stopCode.length > 7) {
+      this.props.invalidInput("Input should have 1 - 6 digits")
+      return false
+    }
+    else if (stopCode.isNaN) {
+      this.props.invalidInput("Input is not a number")
+      return false
     }
   }
 
@@ -53,37 +71,9 @@ const mapDispatchToProps = dispatch => {
     fetchJSON: (agency, stopCode) => {
       dispatch(fetchJSON({agency, stopCode}))
     },
-    fetchRefuse: () => dispatch(fetchRefuse())
+    fetchRefuse: () => dispatch(fetchRefuse()),
+    invalidInput: (error) => dispatch(invalidInput(error))
   }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form)
-
-// const renderField = ({ input, label, type, meta: { touched, error } }) => (
-//   <div>
-//     <label>{label}</label>
-//     <div>
-//       { <input {...input} placeholder={label} type={type} /> }
-//       { touched && error ? <span> {error} </span> : '' }
-//     </div>
-//   </div>
-// )
-
-// const renderSelect = ({ input, label, children, meta: { touched, error } }) => (
-//   <div>
-//     <label>{label}</label>
-//     <div>
-//       { <select {...input}>{children}</select> }
-//       { touched && error ? <span> {error} </span> : '' }
-//     </div>
-//   </div>
-// )
-
-// const validate = values => {
-//   const errors = {};
-//   const options = ["SF", "BA", "CT"];
-//   errors.agency = (!values.agency || options.indexOf(values.agency) === -1 ) ? "Please select a valid agency" : '';
-//   errors.stopCode = ( isNaN(Number(values.stopCode)) || values.stopCode.length < 1 || values.stopCode.length > 7 ) ? "Please enter a valid stop code" : '';
-
-//   return errors;
-// }
