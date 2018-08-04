@@ -1,0 +1,38 @@
+.errbox {
+    border: 2px dashed red;
+    display: inline-block;
+    padding: 5px;
+}
+
+.loading {
+    height: 40px;
+    opacity: 1; /*fades icon*/
+    position: relative;
+    transition: opacity linear 0.1s; /*fades icon*/
+}
+
+.loading::before {
+  animation: 1s linear infinite loader;
+  border: solid 3px #C0C0C0;
+  border-bottom-color: #1C82B5;
+  border-radius: 50%;
+  content: "";
+  height: 30px;
+  left: 50%;
+  opacity: inherit; /*fades icon*/
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  transform-origin: center;
+  width: 30px;
+  will-change: transform; /* inform browser to optimise animation*/
+}
+
+@keyframes loader {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}

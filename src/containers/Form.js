@@ -42,14 +42,14 @@ class Form extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="agency">Agency: </label>
-        <select name="agency" id="agency">
+        <select name="agency" id="agency" required>
           <option value="">--None--</option>
           <option value="SF">Muni</option>
           <option value="BA">Bart</option>
           <option value="CT">Caltrain</option>
         </select>
         <label htmlFor="stopCode">Stop Code:</label>
-        <input type="text" name="stopCode" id="stopCode" />
+        <input type="text" name="stopCode" id="stopCode" required/>
         <input type="submit" name="submit" value="Submit" />
       </form>
     )

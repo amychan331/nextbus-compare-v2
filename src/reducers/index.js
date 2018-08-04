@@ -71,7 +71,8 @@ export function reducers (state = initialState, action) {
       return {
         ...state,
         loading: false,
-        items: newItems
+        items: newItems,
+        alert: "Data removed."
       }
 
     default:

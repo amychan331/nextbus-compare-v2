@@ -1,5 +1,5 @@
 ul {
-    border: 2px dashed #b8ece1;
+    border: 3px dashed #b8ece1;
     display: inline-block;
     background-color: #e7f8f5;
     color: #145D82;
@@ -30,6 +30,24 @@ li {
     font-size: 1.125em;
     font-weight: bold;
     margin-top: 2px;
+}
+
+button.removeEntry:active, button.removeEntry:hover {
+    background-color: #1C82B5;
+    color: white;
+}
+
+button.removeEntry {
+    background-color: white;
+    border: 1px solid #93B7C7;
+    border-radius: 3px;
+    clear: both;
+    color: #1C82B5;
+    display: block;
+    font-size: 1em;
+    margin: auto;
+    margin-top: 10px;
+    padding: 3px 6px;
 }
 
 /* Smartphones (portrait and landscape) iPads (landscape) ----------- */

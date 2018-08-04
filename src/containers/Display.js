@@ -36,7 +36,7 @@ class Display extends Component {
             </li>
           )
         )}
-        <button onClick={ (e) => this.props.removeItem({stopCode}) }>Remove Entry</button>
+        <button className="removeEntry" onClick={ (e) => this.props.removeItem({stopCode}) }>Remove Entry</button>
       </ul>
     ))
     return timetable
@@ -44,7 +44,7 @@ class Display extends Component {
 
   render() {
     return (
-      <section className="timetable">
+      <section role="alert" aria-live="polite" className="timetable">
         { this.timeLine() }
       </section>
     )

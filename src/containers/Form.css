@@ -7,14 +7,14 @@ label {
     margin-left: 15px;
 }
 
-input[name="submit"]:active, input[name="submit"]:hover {
+input[name="submit"]:hover, input[name="submit"]:active {
     background-color: #93B7C7;
     color: #1C82B5;
 }
 
 input[name="submit"] {
     background-color: #1C82B5;
-    border: 1.5px solid #93B7C7;
+    border: 1px solid #93B7C7;
     border-radius: 5px;
     clear: both;
     color: white;
@@ -23,7 +23,7 @@ input[name="submit"] {
     font-weight: bold;
     margin: auto;
     margin-top: 10px;
-    text-shadow: 1px 1px #93B7C7;
+    padding: 3px 6px;
 }
 
 /* Smartphones (portrait and landscape) ----------- */

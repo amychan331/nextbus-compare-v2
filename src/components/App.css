@@ -5,6 +5,19 @@
     width: 75%;
 }
 
+.err {
+    color: red;
+    font-style: italic;
+    font-weight: none;
+    margin-left: 5px;
+}
+
+.screenreader {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+
 header h1 {
     color: #C13140;
     font-family: 'Georgia', 'Times New Roman', serif;
@@ -17,20 +30,8 @@ header p {
     margin-bottom: 20px;
 }
 
-.err {
-    color: red;
-    font-style: italic;
-    font-weight: none;
-    margin-left: 5px;
-}
-
-.msg {
-    font-style: italic;
-    text-align: center;
-}
-
 main {
-    border: 2px dashed #063a2f;
+    border: 3px dashed #C0C0C0;
     height: 90%;
     padding: 10px 0;
 }
