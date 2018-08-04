@@ -7,8 +7,10 @@ label {
     margin-left: 15px;
 }
 
-input[name="submit"]:hover, input[name="submit"]:active {
-    background-color: #93B7C7;
+input[name="submit"]:focus,
+input[name="submit"]:hover,
+input[name="submit"]:active {
+    background-color: #C0C0C0;
     color: #1C82B5;
 }
 

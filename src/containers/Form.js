@@ -40,7 +40,7 @@ class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form id="skip-target" tabIndex="-1" onSubmit={this.handleSubmit}>
         <label htmlFor="agency">Agency: </label>
         <select name="agency" id="agency" required>
           <option value="">--None--</option>
@@ -48,8 +48,8 @@ class Form extends Component {
           <option value="BA">Bart</option>
           <option value="CT">Caltrain</option>
         </select>
-        <label htmlFor="stopCode">Stop Code:</label>
-        <input type="text" name="stopCode" id="stopCode" required/>
+        <label htmlFor="stopCode">Stop Code: </label>
+        <input type="text" name="stopCode" id="stopCode" placeholder="Station stop code" required />
         <input type="submit" name="submit" value="Submit" />
       </form>
     )

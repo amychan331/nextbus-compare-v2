@@ -1,8 +1,21 @@
-.App {
-    color: #1C82B5;
-    margin: auto;
-    text-align: center;
-    width: 75%;
+/* Over Elements */
+.skip-form:link, .skip-form:visited {
+    color: #589EC1;
+    left: -999px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.skip-form:focus, .skip-form:hover, .skip-form:active {
+    border: 2px dashed #1C82B5;
+    color: #589EC1;
+    display: block;
+    clear: both;
+    left: -5%;
+    padding: 3px;
+    position: relative;
+    text-decoration: underline dotted;
+    width: 200px;
 }
 
 .err {
@@ -17,6 +30,15 @@
     overflow: hidden;
     width: 0;
 }
+
+/* Page Parts */
+.App {
+    color: #1C82B5;
+    margin: auto;
+    text-align: center;
+    width: 75%;
+}
+
 
 header h1 {
     color: #C13140;
@@ -44,6 +66,23 @@ main p {
 footer {
     color: #589EC1;
     font-style: italic;
+    margin-top: 10px;
+}
+
+footer a:link, footer a:visited {
+    color: #589EC1;
+    text-decoration: none;
+}
+
+footer a:focus,
+footer a:hover,
+footer a:active {
+    color: #C0C0C0;
+    text-decoration: none;
+}
+
+footer i {
+    font-size: 1.5em;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
