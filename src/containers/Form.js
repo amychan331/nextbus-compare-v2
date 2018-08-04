@@ -49,7 +49,7 @@ class Form extends Component {
           <option value="CT">Caltrain</option>
         </select>
         <label htmlFor="stopCode">Stop Code:</label>
-        <input type="text" name="stopCode" id="stopCode" required/>
+        <input type="text" name="stopCode" id="stopCode" required />
         <input type="submit" name="submit" value="Submit" />
       </form>
     )

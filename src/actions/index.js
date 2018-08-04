@@ -52,7 +52,12 @@ export function removeItem (body) {
 
 export const fetchJSON = body => dispatch => {
   dispatch(requestData(body))
-  return fetch(`https://api.511.org/transit/StopMonitoring?api_key=${process.env.REACT_APP_API_KEY}&agency=${body.agency}&stopCode=${body.stopCode}`)
+  return fetch(
+    `https://api.511.org/transit/StopMonitoring?api_key=${process.env.REACT_APP_API_KEY}&agency=${body.agency}&stopCode=${body.stopCode}`,
+    {
+      mode: 'cors',
+      header: 'Access-Control-Allow-Origin':'https://api.511.org/*',
+    })
   .then(res => res.json())
   .then(json => dispatch(fetchSuccess(json)))
   .catch(err => dispatch(fetchFailure(err)))
