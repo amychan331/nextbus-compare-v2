@@ -4,16 +4,16 @@
 ## What It Does:
 Using the 511 SF Bay API, Nextbus Compare uses station stop code input by user to displays data regarding the public transit that stops there and corresponding arrival time. The application can display up 3 stations under the services of SF Muni, Bart and Caltrain. In addition, user can remove that station as needed.
 
-## Why Another Transit App? Don't Muni Have One?
-Most public transit services do. However, most of them depends on geolocation. I wanted to make one that uses input station code and allows comparison of station data. Geolocation is useful if you are at the station, but not less so if you are planning the trip at home. Also, many those transit uses what they consider the best route. As a native San Franciscan, there are certain route patterns that I feel is better due to my local knowledge - construction, accidents, safety concerns, less frequent but faster limit bus, ancient roads so bumpy I feel like my internals are going to bump right out (painful personal experience here......), etc.
+## Why Transit App?
+Most public transit application uses geolocation. I wanted to make one that 1) uses input station code instead and 2) allows comparison of station data. Geolocation is useful if you are at the station, but less so if I am planning the trip in advance away from a station point. Also, many of those transit uses what they consider the best route. As a native San Franciscan, there are certain route patterns that I feel is better due to my local knowledge - construction, accidents, safety concerns, less frequent but faster limit bus, ancient roads so bumpy I feel like my internals are going to bump right out (painful personal experience here......), etc.
 
 Overall, I want to be able to input station code and get all the buses that stops - no geolocations required. I also want to compare them on one single screen.
 
 ## Why Version 2?
-Version 1 was my first attempt of using only React and good semantic code that make it somewhat accessible. For the second version, I want:
+Version 1 was my first attempt of using only React. For the second version, I want:
 * State management with Redux: I want the ability to control state so I can easily add and remove data without passing props too much.
 * Testing with Mocha: I want to try out unit/integration testing. I decided to go with Mocha and Chai.
-* Accessibility: With React and most JavaScript features, there are typically async loading and dynamic interactions. In this case, I have a form with loading spinner, error messages, and async loaded data from the public transit API. All those would not be accessible by default just by having good semantic code. I would need to implement features specifically for accessibility purposes.
+* Better Accessibility: With JavaScript features, there are typically async loading and dynamic interactions. In this case, I have a form with loading spinner, error messages, and async loaded data from the public transit API. For those, I would need to implement accessibility features to alert users when the screen changes.
 * .......Also cause I really want to play with Redux and try out testing.
 
 ## Technology:
@@ -24,7 +24,7 @@ Version 1 was my first attempt of using only React and good semantic code that m
 * Use of JSON API
 * Fontello for social media icons
 * Responsive Design
-* Accessibility
+* Accessibility Features
 
 ## Image:
 Desktop full site view with both error message and data output:<br />
