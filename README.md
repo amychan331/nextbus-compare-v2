@@ -31,10 +31,10 @@ Desktop full site view with both error message and data output:<br />
 <kbd>![Desktop view](https://github.com/amychan331/nextbus-compare-v2/blob/master/public/assets/images/full-site-error-and-data-output.png)</kbd>
 
 Error for reaching 3 input limits:<br />
-<kbd>![Error message](https://github.com/amychan331/nextbus-compare/blob/master/public/assets/images/error-reach-limit.png)</kbd>
+<kbd>![Error message](https://github.com/amychan331/nextbus-compare-v2/blob/master/public/assets/images/error-reach-limit.png)</kbd>
 
 Responsive mobile view with mulitple inputs:<br />
-<kbd>![Responsive mobile view](https://github.com/amychan331/nextbus-compare-v2/blob/master/public/assets/images/responsive-mobile-view.png)</kbd>
+<p align="center"><kbd>![Responsive mobile view](https://github.com/amychan331/nextbus-compare-v2/blob/master/public/assets/images/responsive-mobile-view.png)</kbd></p>
 
 ## Installation
 ```
@@ -46,6 +46,8 @@ cd nextbus-compare-v2
 ```
 npm install
 ```
-Get an API token from https://511.org/developers/list/tokens/create
-Create .env.local file with the content of "REACT_APP_API_KEY=[the 511 API token you just got]"
-npm start to test it out locally, or npm run build to create the build package.
+Get an API token from https://511.org/developers/list/tokens/create.
+
+Create .env.local file with the content of "REACT_APP_API_KEY=[the 511 API token you just got]".
+
+Use npm start to test it out locally, or npm run build to create the build package.
