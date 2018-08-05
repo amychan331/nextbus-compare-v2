@@ -35,7 +35,8 @@ Error for reaching 3 input limits:<br />
 
 Responsive mobile view with mulitple inputs:
 <div style="text-align: center">
-  <img alt="Responsive mobile view" src="https://github.com/amychan331/nextbus-compare-v2/blob/master/public/assets/images/responsive-mobile-view.png" width="750px" height="300px" />
+  <img alt="Responsive mobile view" src="https://github.com/amychan331/nextbus-compare-v2/blob/master/public/assets/images/responsive-mobile-view.png" />
+  <br />
   Responsive mobile view
 </div>
 
