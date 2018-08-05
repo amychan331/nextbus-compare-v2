@@ -34,7 +34,7 @@ Error for reaching 3 input limits:<br />
 <kbd>![Error message](https://github.com/amychan331/nextbus-compare-v2/blob/master/public/assets/images/error-reach-limit.png)</kbd>
 
 Responsive mobile view with mulitple inputs:
-<div style="text-align: center">
+<div align="center">
   <img alt="Responsive mobile view" src="https://github.com/amychan331/nextbus-compare-v2/blob/master/public/assets/images/responsive-mobile-view.png" />
   <br />
   Responsive mobile view
