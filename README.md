@@ -1,25 +1,36 @@
-# Nextbus Compare
+# Nextbus Compare - Version 2 (http://nextbus-compare.herokuapp.com/)
 
-## Description:
-This React app finds up to 3 transit station and the corrosponding vechicles arrival time by the station's stop code.
-I think the NextBus app used to take in stop code as input, but not any more. When a station have stop code on display, it is often much quicker and more convienant to type in digit than to search for street sign.
+## What It Does:
+Using the 511 SF Bay API, Nextbus Compare uses station stop code input by user to displays data regarding the public transit that stops there and corresponding arrival time. The application can display up 3 stations under the services of SF Muni, Bart and Caltrain. In addition, user can remove that station as needed.
 
+## Why Another Transit App? Don't Muni Have One?
+Most public transit services do. However, most of them depends on geolocation. I wanted to make one for inputting station code and allows comparison of station data. Geolocation is useful if you are at the station. Also, many those transit uses what they conside the best route. As a native San Franciscan, there are certain route patterns that I feel is better due to my own local knowledge - construction, accidents, safety concerns, less frequent but faster limit bus, ancient roads so bumpy I feel like my internals are going to bump right out (painful personal experience here......), etc.
+
+Overall, I want to be able to input station code and get all the buses that stops - no geolocations required. I also want to compare them on one single screen.
+
+## Why Version 2?
+Version 1 was my first attempt of using only React and good semantic code that make it somewhat accessible. For the second version, I want:
+* State manipulation with Redux: Ability to control state so I can easily add and remove data. Also just cause I want to learn Redux - it's a side-project, people.
+* Testing with Mocha: Try out unit/integration testing. I decided to go with Mocha and Chai. The test here are pretty basic for now - just testing if components exist.
+* Accessibility: With React and most JavaScript features, there are typically async loading and dynamic interactions. In this case, I have a form with loading spinner, error messages, and async loaded data from the public transit API. All those would not be accessible by default just by having good semanti code. I would to implement features specifically for accessibility purposes.
+* .......Also cause I really want to play with Redux and try out testing.
 
 ## Technology:
-I decided to use React for this app, which gets its json data from the NextBus API. <br />
-For version 2, I have implemented Redux and added features to remove existing data. I also did a bit of testing with Mocha and Chai.<br />
-The site is currently at http://nextbus-compare.herokuapp.com/ for anyone who wants to test it out.
+* React
+* Redux
+* Mocha with Chai
+* Semantic HTML5 & CSS3
+* Use of JSON API
+* Fontello for social media icons
+* Responsive Design
+* Accessibility
 
 ## Image:
-Input form before data submission, with error message on display:
-<kbd>![Input Form with Error](https://github.com/amychan331/nextbus-compare/blob/master/public/img/NC_no_input_output.png)</kbd>
+Desktop full site view with both error message and data output:
+<kbd>![Desktop view](https://github.com/amychan331/nextbus-compare-v2/blob/master/public/assets/images/full-site-error-and-data-output.png)</kbd>
 
-The time chart displaying 3 different station stop, one of which does not exist:
-<kbd>![Regular Output](https://github.com/amychan331/nextbus-compare/blob/master/public/img/NC_output.png)</kbd>
+Error for reaching 3 input limits:
+<kbd>![Error message](https://github.com/amychan331/nextbus-compare/blob/master/public/img/error-reach-limit.png)</kbd>
 
-Error message for duplicate stop code entry:
-<kbd>![Duplicate Input Error](https://github.com/amychan331/nextbus-compare/blob/master/public/img/NC_duplicate_err.png)</kbd>
-
-Error message for maxing out input submission:
-<kbd>![Maxed Input Error](https://github.com/amychan331/nextbus-compare/blob/master/public/img/NC_max_input_err.png)</kbd>
-# nextbus-compare-v2
+Responsive mobile view with mulitple inputs:
+<kbd>![Responsive mobile view](https://github.com/amychan331/nextbus-compare-v2/blob/master/public/assets/images/responsive-mobile-view.png)</kbd>
